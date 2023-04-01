@@ -8,7 +8,7 @@ namespace Stack_Queue
         static void Main(string[] args)
         {
             Console.WriteLine("*****  STACK & QUEUE Problems");
-            Console.Write("Insertion of element using: \n1. STACK.\n2. LINKED LIST.\n" +
+            Console.Write("Checking STACK ISEMPTY or NOT using: \n1. STACK.\n2. LINKED LIST.\n" +
                 "Choose option to perform:  ");
             int option = Convert.ToInt32(Console.ReadLine());
             Console.Write("Your choice is: " + option + "\n");
@@ -20,6 +20,7 @@ namespace Stack_Queue
                     stack.Push(56);
                     stack.Push(30);
                     stack.Push(70);
+                    stack.IsEmpty();
                     stack.Display();
                     break;
                 case 2:
@@ -28,6 +29,8 @@ namespace Stack_Queue
                     list.Add(56);
                     list.Add(30);
                     list.Add(70);
+                    list.DisplayList();
+                    list.isEmpty();
                     list.DisplayList();
                     break;
                 default:

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stack_Queue
 {
-    // UC1- Insertion of element using LINKED LIST.
+    // UC2- Checking STACK ISEMPTY using LINKED LIST.
     internal class UsingLinkedList
     {
         public Node top;
@@ -23,6 +23,32 @@ namespace Stack_Queue
                 newNode.next = top;
                 top = newNode;
                 Console.WriteLine("{0} is inserted into Stack", top.data);
+            }
+        }
+
+        public void Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            Console.WriteLine("\n{0} is at the top", top.data);
+        }
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            Console.WriteLine("{0} is Removed from the Stack", top.data);
+            top = top.next;
+        }
+        public void isEmpty()
+        {
+            while (top != null)
+            {
+                Peek();
+                Pop();
             }
         }
 
